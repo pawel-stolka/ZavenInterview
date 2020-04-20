@@ -1,0 +1,65 @@
+﻿@model List<ZavenDotNetInterview.App.Models.Job>
+
+@{
+    ViewBag.Title = "Jobs";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div class="row">
+    <div class="col-sm-5">
+        @Html.ActionLink("Create", "Create", null, new { @class = "btn btn-primary" })
+    </div>
+
+    <div class="col-sm-5">
+        @Html.ActionLink("Process", "Process", null, new { @class = "btn btn-warning" })
+    </div>
+</div>
+
+<br/>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayName("Name")
+        </th>
+        <th>
+            @Html.DisplayName("Status")
+        </th>
+        <th>
+            @Html.DisplayName("Fails")
+        </th>
+        <th>
+            @Html.DisplayName("Do After")
+        </th>
+        <th>
+            @Html.DisplayName("Created")
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var job in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => job.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => job.Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => job.Fails)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => job.DoAfter)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => job.Created)
+            </td>
+            <td>
+                @Html.ActionLink("Details", "Details", new { jobId = job.Id })
+            </td>
+        </tr>
+    }
+
+</table>

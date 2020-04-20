@@ -1,0 +1,28 @@
+﻿@model IEnumerable<ZavenDotNetInterview.App.Models.Log>
+
+@*@Html.Label("Logs")*@
+<h4>Job Logs</h4>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedAt)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+
+    </tr>
+
+    @foreach (var item in Model.OrderByDescending(x => x.CreatedAt)) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedAt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+        </tr>
+    }
+
+</table>

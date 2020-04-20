@@ -1,0 +1,66 @@
+﻿@model ZavenDotNetInterview.App.Models.Job
+@{
+    ViewBag.Title = "Job Details";
+}
+
+<h3>@ViewBag.Title</h3>
+<hr />
+
+@*l @Html.DisplayNameFor(model => model.Name)
+n @Html.DisplayFor(model => model.Name)*@
+
+<div>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Created)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Created)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DoAfter)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DoAfter)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastUpdatedAt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastUpdatedAt)
+        </dd>
+
+    </dl>
+</div>
+
+@*@Html.DisplayText("Logs")*@
+
+
+<div>
+    @Html.Partial("JobLogs", model: Model.Logs)
+</div>
+
+<div>
+    @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-default"})
+</div>
