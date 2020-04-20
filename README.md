@@ -1,3 +1,12 @@
+Update:
+
+Większość rzeczy zrobiłem
+- parallel nie działa wg tego co wiem dobrze z DbContextem
+Kilka rzeczy możnaby jeszcze usprawnić, zostawiam do oceny
+
+Paweł Stolka
+--------------------------
+
 # Zadanie rekrutacyjne .NET
 
 Zadaniem kandydata jest poprawienie aplikacji ponieważ nie działa w sposób poprawny oraz jakość kodu pozostawia wiele do życzenia. W kodzie aplikacji jest pozostawionych specialnie kilka błędów i niekonsekwencji, które należy naprawić. Kod powinien być poprawiony z zachowaniem ogólnie przyjętych zasad __Clean Code__ oraz __SOLID__.
